@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京 8 天 7 夜最強黃金比例攻略</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tokyo: {
+                            night: '#0a0a0f',
+                            neon: '#00f2ff',
+                            magenta: '#ff007a',
+                            gold: '#d4af37',
+                            slate: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            'from': { 'box-shadow': '0 0 10px #00f2ff, 0 0 20px #00f2ff' },
+                            'to': { 'box-shadow': '0 0 20px #ff007a, 0 0 40px #ff007a' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #00f2ff, #ff007a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: rgba(0, 242, 255, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0a0a0f;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-tokyo-magenta selection:text-white">
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 z-50">
+        <div id="progress" class="h-full bg-gradient-to-right from-tokyo-neon to-tokyo-magenta w-0 transition-all duration-300"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-6">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-tokyo-night z-10"></div>
+            <img src='https://opal.google/board/blobs/adb174c0-6be4-44ee-bdf8-9ee0dd74690f' alt='media_1' class="w-full h-full object-cover opacity-80 scale-105" />
+        </div>
+
+        <div class="relative z-20 max-w-5xl w-full text-center space-y-8">
+            <div class="inline-block px-4 py-1 rounded-full border border-tokyo-neon/50 bg-tokyo-neon/10 text-tokyo-neon text-sm font-bold tracking-widest uppercase mb-4 animate-pulse">
+                ID: M11416113
+            </div>
+            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight text-white">
+                <span class="block">東京 8 天 7 夜</span>
+                <span class="text-gradient">最強黃金比例</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed">
+                從「爆買」到「懂玩」的深度攻略。在忙碌的罅隙中，給了你一個觀察世界、也觀察自己的窗口。
+            </p>
+            <div class="pt-10 flex flex-wrap justify-center gap-6">
+                <div class="flex items-center gap-3 glass-card px-6 py-3">
+                    <span class="text-tokyo-neon font-bold text-2xl">41</span>
+                    <span class="text-slate-400 text-sm uppercase">Min<br>Skyliner</span>
+                </div>
+                <div class="flex items-center gap-3 glass-card px-6 py-3">
+                    <span class="text-tokyo-magenta font-bold text-2xl">50%</span>
+                    <span class="text-slate-400 text-sm uppercase">Hotel<br>Increase</span>
+                </div>
+                <div class="flex items-center gap-3 glass-card px-6 py-3">
+                    <span class="text-tokyo-gold font-bold text-2xl">4:3:1</span>
+                    <span class="text-slate-400 text-sm uppercase">Golden<br>Ratio</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-20 space-y-32">
+
+        <!-- Introduction -->
+        <section class="max-w-3xl mx-auto text-center space-y-8">
+            <p class="text-2xl md:text-3xl leading-relaxed font-light italic text-slate-200">
+                「在旅行者的眼中，東京是一座永遠不會完成的城市。它像是一個不停增長的有機體，在舊有的街道紋理上，不斷覆蓋上數位化與現代化的新皮層。」
+            </p>
+            <div class="w-20 h-1 bg-tokyo-neon mx-auto rounded-full"></div>
+        </section>
+
+        <!-- Section 1: Golden Ratio -->
+        <section>
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="md:w-1/3 sticky top-24">
+                    <h2 class="text-tokyo-neon font-display font-black text-4xl mb-4 italic">01 / Logic</h2>
+                    <h3 class="text-3xl font-bold text-white mb-6">為什麼是 8 天 7 夜？旅遊界的「黃金比例」大公開！</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        從旅行心理學的角度來看，太短的行程像是在趕集，太長的則容易產生審美疲勞。八天，剛好能讓我們從「觀光客」的焦慮中解脫。
+                    </p>
+                </div>
+                <div class="md:w-2/3 grid grid-cols-1 gap-6">
+                    <div class="glass-card p-8 bento-item group">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-tokyo-neon/20 flex items-center justify-center text-tokyo-neon text-2xl font-bold">4</div>
+                            <h4 class="text-xl font-bold text-white">4 天 市區潮流 (Urban Pulse)</h4>
+                        </div>
+                        <p class="text-slate-400 leading-relaxed">走進澀谷、麻布台之丘，感受全球化最前沿的消費地景。在這裡觸摸東京跳動最快的脈搏。</p>
+                    </div>
+                    <div class="glass-card p-8 bento-item group">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-tokyo-magenta/20 flex items-center justify-center text-tokyo-magenta text-2xl font-bold">3</div>
+                            <h4 class="text-xl font-bold text-white">3 天 近郊呼吸 (Regional Escape)</h4>
+                        </div>
+                        <p class="text-slate-400 leading-relaxed">近距離凝視富士山的身影，或沉浸在箱根的溫泉煙霧中，這三天是情緒的緩衝區。</p>
+                    </div>
+                    <div class="glass-card p-8 bento-item group">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-tokyo-gold/20 flex items-center justify-center text-tokyo-gold text-2xl font-bold">1</div>
+                            <h4 class="text-xl font-bold text-white">1 天 圓夢樂園 (Magic Day)</h4>
+                        </div>
+                        <p class="text-slate-400 leading-relaxed">迪士尼不僅是孩子的夢想，也是成年人對抗現實世界的短暫避難所。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: History -->
+        <section class="relative">
+            <div class="absolute -left-20 top-0 text-[10rem] font-black text-white/5 select-none pointer-events-none">HISTORY</div>
+            <div class="max-w-4xl mx-auto space-y-12 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-tokyo-magenta font-display font-black text-4xl mb-4 italic">02 / Context</h2>
+                    <h3 class="text-3xl font-bold text-white">老東京 vs. 新東京：旅遊熱潮是怎麼開始的？</h3>
+                </div>
+
+                <div class="space-y-12 border-l-2 border-tokyo-slate ml-4 md:ml-0 pl-8 md:pl-0">
+                    <div class="relative md:flex md:justify-between items-center group">
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-tokyo-magenta border-4 border-tokyo-night z-20 group-hover:scale-150 transition-transform"></div>
+                        <div class="md:w-[45%] glass-card p-6 mb-8 md:mb-0">
+                            <div class="text-tokyo-magenta font-black mb-2 tracking-tighter text-xl">2003 • 觀光立國</div>
+                            <p class="text-slate-300">小泉純一郎政府的大膽轉向，代表日本開始從「出口製造大國」意識到自己擁有珍貴的「文化資產」。</p>
+                        </div>
+                        <div class="md:w-[45%]"></div>
+                    </div>
+
+                    <div class="relative md:flex md:justify-between items-center group">
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-tokyo-neon border-4 border-tokyo-night z-20 group-hover:scale-150 transition-transform"></div>
+                        <div class="md:w-[45%]"></div>
+                        <div class="md:w-[45%] glass-card p-6 mb-8 md:mb-0">
+                            <div class="text-tokyo-neon font-black mb-2 tracking-tighter text-xl">2013 • 爆買時代</div>
+                            <p class="text-slate-300">LCC 普及與日圓貶值。秋葉原與銀座擠滿了扛著電鍋與藥妝的遊客，那是東京旅遊的「加法時期」。</p>
+                        </div>
+                    </div>
+
+                    <div class="relative md:flex md:justify-between items-center group">
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-4 border-tokyo-night z-20 group-hover:scale-150 transition-transform"></div>
+                        <div class="md:w-[45%] glass-card p-6">
+                            <div class="text-white font-black mb-2 tracking-tighter text-xl">PRESENT • 數位轉生</div>
+                            <p class="text-slate-300">實體 Suica 消失但轉生進入手機，全城數位化與無障礙空間優化，進入「無現金、無摩擦」新領域。</p>
+                        </div>
+                        <div class="md:w-[45%]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Current Views -->
+        <section class="glass-card p-8 md:p-16 overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-tokyo-neon/10 blur-[100px] rounded-full"></div>
+            <div class="relative z-10">
+                <h2 class="text-tokyo-neon font-display font-black text-4xl mb-4 italic text-center">03 / Mainstream</h2>
+                <h3 class="text-3xl font-bold text-white text-center mb-16">現在大家都怎麼玩？東京旅遊的「主流新觀點」</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="space-y-4">
+                        <div class="text-tokyo-neon text-4xl font-black opacity-50">01</div>
+                        <h4 class="text-xl font-bold text-white border-b border-tokyo-neon/30 pb-2">住宿戰略高地</h4>
+                        <ul class="text-slate-400 space-y-3">
+                            <li><strong class="text-white">上野：</strong> 41 分鐘直達機場的效率之王</li>
+                            <li><strong class="text-white">新宿：</strong> 富士山/箱根行程的最佳樞紐</li>
+                            <li><strong class="text-white">日本橋：</strong> 江戶餘韻與治安之冠</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-tokyo-magenta text-4xl font-black opacity-50">02</div>
+                        <h4 class="text-xl font-bold text-white border-b border-tokyo-magenta/30 pb-2">從物件到記憶</h4>
+                        <p class="text-slate-400">不再只是塞滿行李箱。預約一場 <strong>Omakase</strong> 或在 <strong>TeamLab</strong> 的光影中探索，消費重心正轉向感官邊界。</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-tokyo-gold text-4xl font-black opacity-50">03</div>
+                        <h4 class="text-xl font-bold text-white border-b border-tokyo-gold/30 pb-2">數位生存能力</h4>
+                        <p class="text-slate-400">這是一場數位考驗。手機版 Suica、Visit Japan Web、以及 AR 導航，自由行需要的是充足的電力而非紙本地圖。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Pain Points -->
+        <section>
+            <div class="flex flex-col md:flex-row-reverse gap-12 items-start">
+                <div class="md:w-1/3 sticky top-24">
+                    <h2 class="text-tokyo-magenta font-display font-black text-4xl mb-4 italic">04 / Analysis</h2>
+                    <h3 class="text-3xl font-bold text-white mb-6">人紅是非多？東京旅遊的「美麗與哀愁」</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        作為理性的觀察者，我們不能忽視繁榮背後的陰影。現在的東京，正面臨著所謂的「觀光公害（Over-tourism）」。
+                    </p>
+                </div>
+                <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-red-950/20 border border-red-500/20 p-8 rounded-3xl space-y-4">
+                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">景觀與生活的拉鋸</h4>
+                        <p class="text-slate-400 text-sm">河口湖 Lawson 的遮幕與澀谷萬聖節的禁酒令，是居民守護寧靜的最後掙扎。</p>
+                    </div>
+                    <div class="bg-red-950/20 border border-red-500/20 p-8 rounded-3xl space-y-4">
+                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">房價漲幅 50%</h4>
+                        <p class="text-slate-400 text-sm">2024 年房價瘋狂上漲，連當地商務客都成了「出差難民」，考驗預算規劃。</p>
+                    </div>
+                    <div class="bg-red-950/20 border border-red-500/20 p-8 rounded-3xl col-span-1 md:col-span-2 space-y-4">
+                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">制度轉變的考驗</h4>
+                        <p class="text-slate-400 text-sm">JR Pass 漲價、免稅新規則「先付後退」擬議，都可能讓未來的旅行流程更具挑戰性。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Future -->
+        <section class="py-20 relative rounded-[3rem] bg-gradient-to-br from-tokyo-night to-slate-900 border border-white/5 overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+            <div class="relative z-10 px-8 md:px-16 text-center">
+                <h2 class="text-tokyo-gold font-display font-black text-4xl mb-4 italic">05 / Future</h2>
+                <h3 class="text-3xl font-bold text-white mb-12">先睹為快！未來的東京還能怎麼玩？</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="p-6 border-l border-tokyo-gold/30">
+                        <h5 class="text-tokyo-gold font-bold mb-3">2024 新驚喜</h5>
+                        <p class="text-slate-400 text-sm">Fantasy Springs 園區、豐洲溫泉設施，東京從不缺讓你回訪的理由。</p>
+                    </div>
+                    <div class="p-6 border-l border-tokyo-gold/30">
+                        <h5 class="text-tokyo-gold font-bold mb-3">2031 交通躍進</h5>
+                        <p class="text-slate-400 text-sm">羽田 Access 線將縮短至 18 分鐘。空間與時間的距離正在被極度壓縮。</p>
+                    </div>
+                    <div class="p-6 border-l border-tokyo-gold/30">
+                        <h5 class="text-tokyo-gold font-bold mb-3">向二線分散</h5>
+                        <p class="text-slate-400 text-sm">避開雷門人潮，探索千葉房總或茨城，尋找真正的安靜是未來趨勢。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="max-w-4xl mx-auto py-20 border-t border-white/10">
+            <div class="glass-card p-12 relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-tokyo-magenta/10 blur-[50px] rounded-full"></div>
+                <div class="relative z-10 space-y-8">
+                    <div class="flex items-center gap-4 text-tokyo-neon font-bold text-xl uppercase tracking-tighter">
+                        <span class="w-12 h-[1px] bg-tokyo-neon"></span>
+                        結語 Conclusion
+                    </div>
+                    <p class="text-2xl leading-relaxed text-slate-100 font-light">
+                        現在的東京自由行，已不再是單純的體力活，而是一場「智力與數位能力的綜合考驗」。它要求你懂點歷史、懂點技術、懂點經濟，最重要的是，<span class="text-tokyo-neon font-bold">懂點生活</span>。
+                    </p>
+                    <p class="text-lg text-slate-400">
+                        準備好迎接這場「黃金比例」的挑戰了嗎？
+                    </p>
+                    <button class="bg-gradient-to-r from-tokyo-neon to-tokyo-magenta px-10 py-4 rounded-full font-bold text-white shadow-lg shadow-tokyo-neon/20 hover:scale-105 transition-transform">
+                        開始規劃你的旅程
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll Indicator Script -->
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+</html>
